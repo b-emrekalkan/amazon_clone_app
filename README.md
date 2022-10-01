@@ -64,3 +64,65 @@ npm install react-router-dom
 ```
 
 ## 📜 For reference [click here](https://v5.reactrouter.com/web/guides/quick-start).
+
+## 🚩 Creating Component 👇
+
+- Once it’s installed, now let’s get our hands dirty and write some actual code. Let’s make a new component.
+
+- To make a component, simple make a new file. We call it <b>Home.js</b> under "src" folder for our case. The convention is that the first letter of a component must be in <b>capitals</b> 📢
+
+- Also to make life easier, go ahead and install a Visual Studio Code extension named [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets). This extension will make the boiler plate for React components without you being typing the code all by yourself.
+
+## 🚩 Home.js 👇
+
+- Let’s go in "Home.js". 
+- Just type in <b>“rfce”</b>, hit Enter while on “rfce”
+- This will autocomplete the React boiler plate for you.
+- Now let’s change the class of the div element provided us to “home”.
+- We follow BEM convention while styling our components.
+- <b>BEM Convention</b> helps our CSS and JSX organized for us to read later, and everything becomes easy to keep track of.
+- Let’s just add some text there for now, let’s say Hello. The code on the <b>Home.js</b> file now should be 👇
+
+```javascript
+import React from "react";
+function Home() {
+   return <div className="home">Hello</div>;
+}
+export default Home;
+```
+
+## 🚩 App.js 👇
+
+- If you see the browser, you will not see anything because we haven’t prepared our entry point <b>App.js</b> yet.
+- So let’s open the file and start setting up the <b>React Router</b>.
+- First of all, we need to import the dependencies.
+- Import them using the following code at the top of <b>App.js</b> 👇
+
+```javascript
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+```
+
+- Once you’ve done importing the code, you can now use React Router in your file.
+- Now that we have imported React Router, let’s configure React Router according to our needs. Use the below code in your <b>App.js</b> 👇
+
+```javascript
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+
+function App() {
+return (
+    <>
+        <div className="app">
+            <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                    </Routes>
+            </BrowserRouter>
+        </div>
+    </>
+);
+}
+export default App;
+```
