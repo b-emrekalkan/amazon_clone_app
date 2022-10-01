@@ -52,7 +52,7 @@ export default App;
 
 ## 👉 Now we have our React project perfectly set up. Now we can start making the Amazon Clone.
 
-# 1-SETTING UP THE REACT ROUTER
+# 📢 1-SETTING UP THE REACT ROUTER
 
 - A very important thing to consider in a React app is the <b>navigation <i>(moving from one page to another)</i></b> of the users. Since React is a single page application, it doesn’t support multiple routes by default.
 
@@ -125,4 +125,49 @@ return (
 );
 }
 export default App;
+```
+
+- Our motive is to have <b>Home</b> component to be rendered on the default route that is “/”.
+- To use the <b>Home</b> component, we need to import it, so we imported it at the top.
+- We need to wrap the entire app into the Router component, so that every component is a part of Router and has access to the Router.
+
+### 🚩 We now have the Router set up. Let’s go ahead and make the Amazon Navbar
+
+# 📢 2. CREATING THE NAVBAR
+
+## 💻 We are going to use a package for icons, and we need Material Icons to use them. So open your terminal and write the following command 👇
+```bash
+yarn add @material-ui/core
+```
+- Once you installed the dependencies, you can use it to display SVG icons which are provided by <b>Material UI</b>.
+- Material UI is a very popular UI library for React which has a lot of prebuilt components just as icons which makes life easier.
+
+## 🚩 Create a New Component 👉 "Header.js" and "Header.css" under "src" folder
+
+## 📢 In each component, we will follow the same steps. We have to initialize the component boiler plate using “rfce” and follow the BEM convention and include the CSS file and update the class names 👇
+```javascript
+import React from 'react'
+
+const Header = () => {
+  return (
+    <div className='header'>Header</div>
+  )
+}
+
+export default Header
+```
+
+## 🚩 We need to include "Header Component" in "Router" so that we can actually display it. In "App.js" where you mentioned Route for "/" route, let’s include the "Header" component in it too. Your updated route should look like this 👇
+```javascript
+<Route path="/">
+  <Header />
+  <Home />
+</Route>
+```
+
+## 📢 Remember you place Navbar before the Home component, because the Amazon Navbar is always at the top 👆
+
+## 🚩 Go back to "Header.js" and start setting up the layout of our classic Amazon Navbar 👇
+```javascript
+
 ```
