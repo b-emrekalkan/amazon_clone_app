@@ -1,6 +1,6 @@
 # <center> 💨 AMAZON CLONE APP 💨 </center>
 
-## 🚩 To get started let’s make a new folder named <b>"amazon_clone_app"</b> and open it. As soon as you are in the folder, right click and select <b>"Open With Code"</b>
+## 🚩 To get started let’s make a new folder named "amazon_clone_app" and open it. As soon as you are in the folder, right click and select "Open With Code"
 
 ## 💻 Go to terminal, install and setup React app 👇
 ```bash
@@ -19,18 +19,18 @@ npx create-react-app .
 npm start
 ```
 
-## 🛑 Delete three nonrelevant files from the <b>src</b> folder from the React App 👇
+## 🛑 Delete three nonrelevant files from the "src" folder from the React App 👇
 
     - App.test.js
     - logo.svg
     - setupTests.js
 
-## 🚩 Go to <b>App.js</b> and remove the following line from your code 👇
+## 🚩 Go to "App.js" and remove the following line from your code 👇
 ```javascript
 import logo from “./logo.svg”;
 ```
 
-## 🚩 Also remove everything under the first <b> div </b> element from your <b> App.js </b> file. You’re code should look like the following 👇
+## 🚩 Also remove everything under the first "div" element from your "App.js" file. You’re code should look like the following 👇
 ```javascript
 import React from "react";
 import "./App.css";
@@ -40,4 +40,27 @@ function App() {
 export default App;
 ```
 
-## 🛑 Now let’s cleanup the <b> CSS </b> files a bit. Go to <b> App.css</b> and remove all the contents of your file 
+## 🛑 Now let’s cleanup the "CSS" files a bit. Go to "App.css" and remove all the contents of your file.
+
+## 🚩 Now go to "index.css" and add this piece of code on the top. This will get rid of the margin and padding of the page. 👇
+```css
+*{
+ margin: 0;
+ padding: 0;
+}
+```
+
+## 👉 Now we have our React project perfectly set up. Now we can start making the Amazon Clone.
+
+# 1-SETTING UP THE REACT ROUTER
+
+- A very important thing to consider in a React app is the <b>navigation <i>(moving from one page to another)</i></b> of the users. Since React is a single page application, it doesn’t support multiple routes by default.
+
+- But the node packages come to our save. There’s a package named <b>react-router-dom</b> which allows us to create routes for our React project. Not a lot complicated. Setting up is one time, and then whenever you add a new page, you just need to inform the Router. Don’t worry we will cover that in depth here!
+
+## 💻 Go to terminal to install "react-router-dom" 👇
+```bash
+npm install react-router-dom
+```
+
+## 📜 For reference [click here](https://v5.reactrouter.com/web/guides/quick-start).
